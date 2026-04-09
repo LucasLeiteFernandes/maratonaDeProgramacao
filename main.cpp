@@ -2,19 +2,22 @@
 
 using namespace std;
 
-int main() {
-    int n, p, v, t, np = 0;
+void swapValues(int &a, int &b){
+    int temp = a;
+    a = b;
+    b = temp;
+};
 
-    cin >> n;
-    
-    for (int i = 0; i < n; i++){
-        cin >> p >> v >> t;
-        if (p + v + t > 1){
-            np++;
-        }
-    }
-    cout << np;
+int main() {
+    int x = 10;
+    int y = 20;
+
+    swapValues(x, y);
+
+    cout << "x = " << x << ", y = " << y << endl;
+    return 0;
 }
+
 /*
 https://docs.google.com/spreadsheets/d/12ni2YofHJz4_cYITOAjRFvGo_1z37zBlK9UPCpogS0U/edit?gid=119157689#gid=119157689
 Input
