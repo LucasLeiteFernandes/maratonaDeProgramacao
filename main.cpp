@@ -13,26 +13,37 @@ int menor(int a, int b){
 int main() {
     int n, q, m = 0;
     int c[100];
-    int p[100];
+    //int p[100];
     int r[100];
 
+    cout << "n q" << endl;
     cin >> n >> q;
-    for(int i = 0; i < n; i++)
+    cout << "notas do cidadaos\n";
+        for(int i = 0; i < n; i++)
         cin >> c[i];
     
-    for(int i = 0; i < q; i++)
-        cin >> p[i];
+    //cout << "ordem das notas\n";
+    //for(int i = 0; i < q; i++)
+    //    cin >> p[i];
+        
     
+    r[0] = 0;
     for(int i = 0; i < n; i++){
         m = c[i];
-        for (int a = i; a < n; a++){
-            if(c[a] == m)
-                c[a] = 01;
-            m = maior(m, c[a]);
+        cout << "1m(" << i << ") = " << m << endl << endl;
+        for(int a = i; a < n; a++){
+            cout << "2m(" << a << ") = " << m << endl;
+            if (m > r[a]){
+                m = maior(m, c[a]);
+                r[i] = m;
+                c[a] = 0; 
+            }    
         }
-        r[p[i - 1]] = m;
+        cout << endl;
+        cout << "r["<< i << "] = " << m << endl << endl;
     }
 
+    cout << "saida\n";
     for(int i = 0; i < q; i++){
         cout << r[i] << endl;
     }
