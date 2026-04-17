@@ -35,6 +35,7 @@ int main() {
 }
 
 /*
+https://docs.google.com/spreadsheets/d/12ni2YofHJz4_cYITOAjRFvGo_1z37zBlK9UPCpogS0U/edit?gid=119157689#gid=119157689
 A entrada contém vários casos de teste. A primeira linha de cada caso contém dois inteiros N (1 ≤ N ≤ 100), Q (1 ≤ Q ≤ 100), o número de habitantes do país 
 e o número de consultas, respectivamente.
 As N linhas seguintes contém, cada uma, a nota ni obtida pelo i-ésimo cidadão (0 ≤ ni ≤ 30000).
