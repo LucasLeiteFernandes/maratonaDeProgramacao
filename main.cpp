@@ -4,40 +4,71 @@
 using namespace std;
 
 int main() {
-    int a, b, t, n = 0;
+    int n, k = 0, c, v = 1, num;
+    string t;
+    vector<int> l;
+    cin >> n;
+    for (int i = 0; i < n; i++){
+        cin >> t;
 
-    cin >> t;
-
-    for (int i = 0; i < t; i++){
-        cin >> a >> b;
-        while (a % b != 0){
-            a++;
-            n++;
+        c = t.size();
+        for (int i = 0; i < c; i++){
+            if(t[i] != '0'){
+                num = t[i] - '0';
+                num = num * pow(10, (c - (i + 1)));
+                l.push_back(num);
+                k++;
+            }              
         }
-        cout << n << endl;
-        n = 0;
+
+        cout << k << endl;
+        for (int j = 0; j < l.size(); j++){
+            cout << l[j] << " ";
+        } cout << endl;
+        k = 0;
+        v = 1;
+
+        while(l.size() != 0)
+            l.pop_back();
     }
 
     return 0;
-}
+} 
 
 /*
-You are given two positive integers a and b. In one move you can increase a by 1 (replace a with a+1). 
-Your task is to find the minimum number of moves you need to do in order to make a divisible by b. It is possible, that you have to make 0 moves, 
-as a is already divisible by b. You have to answer t independent test cases.
+A positive (strictly greater than zero) integer is called round if it is of the form d00...0. In other words, a positive integer is round if all its digits except the leftmost (most significant) are equal to zero. In particular, all numbers from 1
+ to 9
+ (inclusive) are round.
+
+For example, the following numbers are round: 4000
+, 1
+, 9
+, 800
+, 90
+. The following numbers are not round: 110
+, 707
+, 222
+, 1001
+.
+
+You are given a positive integer n (1≤n≤104). Represent the number n
+ as a sum of round numbers using the minimum number of summands (addends). In other words, you need to represent the given number n
+ as a sum of the least number of terms, each of which is a round number.
 
 Input
-The first line of the input contains one integer t (1≤t≤10^4) — the number of test cases. Then t test cases follow.
+The first line contains an integer t
+ (1≤t≤104
+) — the number of test cases in the input. Then t
+ test cases follow.
 
-The only line of the test case contains two integers a and b (1≤a,b≤10^9).
+Each test case is a line containing an integer n
+ (1≤n≤104
+).
 
 Output
-For each test case print the answer — the minimum number of moves you need to do in order to make a divisible by b.
-
-5
-10 4        2
-13 9        5
-100 13      4
-123 456     333
-92 46       0
+Print t
+ answers to the test cases. Each answer must begin with an integer k
+ — the minimum number of summands. Next, k
+ terms must follow, each of which is a round number, and their sum is n
+. The terms can be printed in any order. If there are several answers, print any of them.
 */
