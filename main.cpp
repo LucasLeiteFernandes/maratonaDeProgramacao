@@ -29,26 +29,21 @@ int main() {
     for (int j = 0; j < k; j++){
         a = m[j];
         for (int i = 1; i < v.size(); i++){
-            //cout << v[i] << endl;
             a = maior(a, v[i]);
-            for (int k = 0; k < v.size(); k++)
-                if (v[k] == a)
-                    v[k] = 0;
         }
         if (a > m[j])
-            m[j] = a;
+        m[j] = a;
+        for (int k = 0; k < v.size(); k++)
+            if (v[k] == a)
+                v[k] = 0;
     }
 
-    cout << t << endl;
     for (int i = 0; i < k; i++){
         s += m[i];
     } 
 
     s = t - s;
     cout << s << endl; 
-    for (int i = 0; i < 1; i++){
-        cout << "EXPLODIR MUNDO!" << endl;
-    }
 }
 /*
 
