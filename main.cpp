@@ -8,6 +8,7 @@ int maior(int a, int b){
 }
 
 int main() {
+    // sei lar
     int n, k, s = 0, a, d, t = 0;
     vector<int> v;
 
@@ -23,7 +24,7 @@ int main() {
     for (int i = 0; i < k; i++){
         m[i] = 0;
     }
-
+   
     m[0] = v[0];
     
     for (int j = 0; j < k; j++){
