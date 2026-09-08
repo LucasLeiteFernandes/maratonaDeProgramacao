@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+
 #include <iostream>
 
 using namespace std;
@@ -52,4 +52,6 @@ Each test case is a line containing an integer n (1≤n≤104).
 Output
 Print t answers to the test cases. Each answer must begin with an integer k — the minimum number of summands. Next, k terms must follow, each of which is a round number, 
 and their sum is n. The terms can be printed in any order. If there are several answers, print any of them.
+
+teste
 */

@@ -57,18 +57,4 @@ Para cada caso de teste, imprima, para cada consulta, uma linha contendo a nota 
 2
 4
 
-
-
-vector<int> vet;
-
-vet.pushback(variavel);
-
-for(int i = 0; i < numerodenotas ; i++){
-    int indice; cin >> indice;
-    cout << vet[indice] << "\n";
-}
-
-
 */
-
-
